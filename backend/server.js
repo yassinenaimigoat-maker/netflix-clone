@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/movies', require('./routes/movies'));
 app.use('/api/watchlist', require('./routes/watchlist'));
+app.use('/api', require('./routes/seed'));
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
