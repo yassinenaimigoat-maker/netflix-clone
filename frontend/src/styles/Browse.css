@@ -1,0 +1,10 @@
+.browse {
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.browse-title {
+  padding: 20px 50px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}

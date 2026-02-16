@@ -1,0 +1,13 @@
+const express = require('express');
+const router = express.Router();
+const { getAllMovies, getMovieById, getFeatured, getTrending, getByGenre, searchMovies, createMovie, getGenres } = require('../controllers/movieController');
+const { protect } = require('../middleware/auth');
+router.get('/', getAllMovies);
+router.get('/featured', getFeatured);
+router.get('/trending', getTrending);
+router.get('/genres', getGenres);
+router.get('/genre/:genre', getByGenre);
+router.get('/search', searchMovies);
+router.get('/:id', getMovieById);
+router.post('/', protect, createMovie);
+module.exports = router;
